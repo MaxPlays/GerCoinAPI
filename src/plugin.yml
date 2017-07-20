@@ -1,0 +1,6 @@
+name: SpliceCoinAPI
+version: 1.0.0
+author: MaxPlays
+main: me.MaxPlays.SpliceCoinAPI.CoinAPI
+commands:
+  coins:
