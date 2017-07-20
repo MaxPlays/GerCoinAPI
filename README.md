@@ -1,0 +1,2 @@
+# GerCoinAPI
+A german CoinAPI
