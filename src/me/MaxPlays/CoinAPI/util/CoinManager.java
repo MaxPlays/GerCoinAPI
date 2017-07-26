@@ -1,6 +1,6 @@
-package me.MaxPlays.SpliceCoinAPI.util;
+package me.MaxPlays.CoinAPI.util;
 
-import me.MaxPlays.SpliceCoinAPI.CoinAPI;
+import me.MaxPlays.CoinAPI.CoinAPI;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.sql.ResultSet;

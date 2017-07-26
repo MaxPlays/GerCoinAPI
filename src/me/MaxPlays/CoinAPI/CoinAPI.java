@@ -1,7 +1,7 @@
-package me.MaxPlays.SpliceCoinAPI;
+package me.MaxPlays.CoinAPI;
 
-import me.MaxPlays.SpliceCoinAPI.util.CoinManager;
-import me.MaxPlays.SpliceCoinAPI.util.SQL;
+import me.MaxPlays.CoinAPI.util.CoinManager;
+import me.MaxPlays.CoinAPI.util.SQL;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;

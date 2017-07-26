@@ -1,6 +1,6 @@
-package me.MaxPlays.SpliceCoinAPI;
+package me.MaxPlays.CoinAPI;
 
-import me.MaxPlays.SpliceCoinAPI.util.CoinManager;
+import me.MaxPlays.CoinAPI.util.CoinManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;

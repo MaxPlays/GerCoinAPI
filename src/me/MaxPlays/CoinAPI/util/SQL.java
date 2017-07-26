@@ -1,4 +1,4 @@
-package me.MaxPlays.SpliceCoinAPI.util;
+package me.MaxPlays.CoinAPI.util;
 
 
 import org.bukkit.Bukkit;
