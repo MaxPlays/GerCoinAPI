@@ -1,6 +1,6 @@
 name: CoinAPI
 version: 1.0.0
 author: MaxPlays
-main: me.MaxPlays.CoinAPi.CoinAPI
+main: me.MaxPlays.CoinAPI.CoinAPI
 commands:
   coins:
