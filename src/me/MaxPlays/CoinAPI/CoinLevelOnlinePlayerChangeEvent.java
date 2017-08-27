@@ -23,6 +23,11 @@ public class CoinLevelOnlinePlayerChangeEvent extends Event {
     public HandlerList getHandlers() {
         return CoinLevelOnlinePlayerChangeEvent.handlers;
     }
+
+    public static HandlerList getHandlerList(){
+        return handlers;
+    }
+
     public Player getPlayer() {
         return player;
     }

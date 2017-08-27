@@ -28,6 +28,10 @@ public class CoinLevelOfflinePlayerChangeEvent extends Event {
         return player;
     }
 
+    public static HandlerList getHandlerList(){
+        return handlers;
+    }
+
     public int getNow() {
         return now;
     }
