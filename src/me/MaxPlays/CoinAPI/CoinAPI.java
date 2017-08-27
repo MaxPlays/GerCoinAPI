@@ -74,7 +74,10 @@ public class CoinAPI extends JavaPlugin{
         CoinManager.insertPlayer(p.getUniqueId().toString(), new CoinManager.runAfter() {
             @Override
             public void run() {
-                instance.sql.update("UPDATE coins SET score=" + i + " WHERE uuid='" + p.getUniqueId().toString() + "';");
+                CoinLevelOnlinePlayerChangeEvent e = new CoinLevelOnlinePlayerChangeEvent(p, i);
+                Bukkit.getPluginManager().callEvent(e);
+                if(!e.isCancelled())
+                    instance.sql.update("UPDATE coins SET score=" + i + " WHERE uuid='" + p.getUniqueId().toString() + "';");
             }
         });
     }
@@ -89,7 +92,17 @@ public class CoinAPI extends JavaPlugin{
                 CoinManager.insertPlayer(uuid, new CoinManager.runAfter() {
                     @Override
                     public void run() {
-                        instance.sql.update("UPDATE coins SET score=" + i + " WHERE uuid='" + uuid + "';");
+                        if(Bukkit.getPlayer(name) != null){
+                            CoinLevelOnlinePlayerChangeEvent e = new CoinLevelOnlinePlayerChangeEvent(Bukkit.getPlayer(name), i);
+                            Bukkit.getPluginManager().callEvent(e);
+                            if(!e.isCancelled())
+                                instance.sql.update("UPDATE coins SET score=" + i + " WHERE uuid='" + uuid + "';");
+                        }else {
+                            CoinLevelOfflinePlayerChangeEvent e = new CoinLevelOfflinePlayerChangeEvent(Bukkit.getOfflinePlayer(name), i);
+                            Bukkit.getPluginManager().callEvent(e);
+                            if(!e.isCancelled())
+                                instance.sql.update("UPDATE coins SET score=" + i + " WHERE uuid='" + uuid + "';");
+                        }
                     }
                 });
             }
